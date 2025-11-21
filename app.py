@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 
 # Load  trained model
-model = pickle.load(open('model.pkl', 'rb'))
+model = joblib.load("model.pkl")
 
 st.title("Diabetes Prediction App")
 st.write("Enter the values for the following :")
@@ -30,3 +30,4 @@ if st.button("Predict"):
         st.error("The model predicts: Diabetes Detected")
     else:
         st.success("The model predicts: No Diabetes")
+
